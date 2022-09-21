@@ -1,6 +1,6 @@
 <?php
 
-namespace Welzh\NovaFields;
+namespace Pdmfc\NovaFields;
 
 use Laravel\Nova\Actions\Action;
 use Laravel\Nova\Fields\Field;
@@ -15,7 +15,7 @@ class ActionButton extends Field
     public $component = 'nova-action-button';
 
     /**
-     * @param  Action|string|null  $action
+     * @param Action|string|null $action
      * @param $resourceId
      * @return ActionButton
      */
@@ -25,7 +25,7 @@ class ActionButton extends Field
 
         if ($actionInst) {
             $actionInst->withMeta([
-                'resourceId' => $resourceId,
+                'resourceId' => $resourceId
             ]);
         }
 
@@ -38,7 +38,7 @@ class ActionButton extends Field
     /**
      * The text to be displayed inside the button.
      *
-     * @param  string  $text
+     * @param string $text
      */
     public function text(string $text)
     {
@@ -50,13 +50,13 @@ class ActionButton extends Field
      *
      * @param callable
      */
-    public function hide()
+    public function hide($callback)
     {
-        return $this->withMeta(['hidden' => true]);
+        return $this->withMeta(['hidden' => call_user_func($callback)]);
     }
 
     /**
-     * Enable loading animation.
+     * Enable loading animation. 
      *
      * @param $callback
      */
@@ -64,7 +64,7 @@ class ActionButton extends Field
     {
         return $this->withMeta(
             [
-                'showLoadingAnimation' => is_callable($callback) ? $callback() : $callback,
+                'showLoadingAnimation' => is_callable($callback) ? $callback() : $callback
             ]
         );
     }
@@ -72,7 +72,7 @@ class ActionButton extends Field
     /**
      * Change loading animation color
      *
-     * @param  string  $loadingColor
+     * @param string $loadingColor
      */
     public function loadingColor(string $loadingColor)
     {
@@ -82,7 +82,7 @@ class ActionButton extends Field
     /**
      * Pass a vue component containing a svg
      *
-     * @param  string  $svg
+     * @param string $svg
      */
     public function svg(string $svg)
     {

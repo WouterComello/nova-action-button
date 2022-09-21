@@ -1,6 +1,6 @@
 <?php
 
-namespace Welzh\NovaFields;
+namespace Pdmfc\NovaFields;
 
 use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Events\ServingNova;
