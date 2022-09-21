@@ -50,7 +50,7 @@ class ActionButton extends Field
      *
      * @param callable
      */
-    public function hide($callback)
+    public function hide()
     {
         return $this->withMeta(['hidden' => true]);
     }
