@@ -1,12 +1,12 @@
 {
-    "name": "pdmfc/nova-action-button",
+    "name": "welzh/nova-action-button",
     "description": "A Laravel Nova field to run actions.",
     "keywords": [
         "laravel",
         "nova"
     ],
     "license": "MIT",
-    "homepage": "https://github.com/pdmfc/nova-action-button",
+    "homepage": "https://github.com/woutercomello/nova-action-button",
     "authors": [
         {
             "name": "João Santos",
@@ -19,13 +19,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Pdmfc\\NovaFields\\": "src/"
+            "Welzh\\NovaFields\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Pdmfc\\NovaFields\\ActionButtonFieldServiceProvider"
+                "Welzh\\NovaFields\\ActionButtonFieldServiceProvider"
             ]
         }
     },
